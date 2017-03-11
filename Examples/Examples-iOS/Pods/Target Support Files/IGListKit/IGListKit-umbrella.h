@@ -1,5 +1,13 @@
 #ifdef __OBJC__
 #import <UIKit/UIKit.h>
+#else
+#ifndef FOUNDATION_EXPORT
+#if defined(__cplusplus)
+#define FOUNDATION_EXPORT extern "C"
+#else
+#define FOUNDATION_EXPORT extern
+#endif
+#endif
 #endif
 
 #import "IGListAssert.h"
@@ -21,9 +29,11 @@
 #import "IGListAdapterDelegate.h"
 #import "IGListAdapterUpdater.h"
 #import "IGListAdapterUpdaterDelegate.h"
+#import "IGListBindable.h"
 #import "IGListCollectionContext.h"
 #import "IGListCollectionView.h"
 #import "IGListCollectionViewLayout.h"
+#import "IGListDiffingSectionController.h"
 #import "IGListDisplayDelegate.h"
 #import "IGListKit.h"
 #import "IGListReloadDataUpdater.h"
